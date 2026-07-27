@@ -1,0 +1,58 @@
+{
+  "landing": {
+    "nav": {
+      "functionalities": "Funcționalități",
+      "museums": "Muzee",
+      "admin": "Admin"
+    },
+    "header": {
+      "contact": "Contact",
+      "download": "Descarcă",
+      "menu": "Meniu"
+    },
+    "hero": {
+      "eyebrow": "Aplicația mobilă pentru vizitarea muzeelor",
+      "titleLine1": "Descoperă",
+      "titleHighlight": "arta și istoria",
+      "titleLine3": "altfel.",
+      "subtitle": "Scanează exponate cu camera, primești răspunsuri instant de la AI și urmărești itinerarii personalizate prin muzee. Cultura română, la un tap distanță.",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "ratingValue": "5.0",
+      "usersCount": "+100 de utilizatori activi"
+    },
+    "functionalities": {
+      "eyebrow": "Funcționalități",
+      "title": "Tot ce îți trebuie ca să explorezi un muzeu",
+      "comingSoon": "Această secțiune este în curând de pregătire."
+    },
+    "museums": {
+      "eyebrow": "Muzee",
+      "title": "Muzeele partenere Artefact",
+      "comingSoon": "Această secțiune este în curând de pregătire."
+    },
+    "admin": {
+      "eyebrow": "Admin",
+      "title": "Panou dedicat muzeelor și administratorilor",
+      "comingSoon": "Această secțiune este în curând de pregătire."
+    },
+    "footer": {
+      "tagline": "Muzee. Artă. Descoperire.",
+      "socialMedia": "Social Media",
+      "copyright": "arte·fact. Toate drepturile rezervate.",
+      "links": {
+        "functionalities": "Funcționalități",
+        "museums": "Muzee partenere",
+        "admin": "Admin",
+        "privacy": "Confidențialitate",
+        "contact": "Contact"
+      }
+    },
+    "cookieConsent": {
+      "title": "Respectăm confidențialitatea ta",
+      "description": "Folosim cookie-uri pentru a înțelege cum folosești Artefact și pentru a-ți îmbunătăți experiența. Poți accepta sau refuza cookie-urile neesențiale oricând.",
+      "accept": "Acceptă",
+      "reject": "Refuză"
+    }
+  }
+}

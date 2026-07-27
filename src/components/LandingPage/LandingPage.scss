@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.landing-page {
+  width: 100%;
+  overflow-x: hidden;
+  background: $color-bg;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 77px;
+
+    @media (max-width: 1100px) {
+      padding-top: 69px;
+    }
+  }
+}

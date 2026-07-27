@@ -1,0 +1,58 @@
+{
+  "landing": {
+    "nav": {
+      "functionalities": "Features",
+      "museums": "Museums",
+      "admin": "Admin"
+    },
+    "header": {
+      "contact": "Contact",
+      "download": "Download",
+      "menu": "Menu"
+    },
+    "hero": {
+      "eyebrow": "The mobile app for visiting museums",
+      "titleLine1": "Discover",
+      "titleHighlight": "art and history",
+      "titleLine3": "differently.",
+      "subtitle": "Scan exhibits with your camera, get instant answers from AI, and follow personalized itineraries through museums. Romanian culture, a tap away.",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "ratingValue": "5.0",
+      "usersCount": "+100 active users"
+    },
+    "functionalities": {
+      "eyebrow": "Features",
+      "title": "Everything you need to explore a museum",
+      "comingSoon": "This section is coming soon."
+    },
+    "museums": {
+      "eyebrow": "Museums",
+      "title": "Artefact partner museums",
+      "comingSoon": "This section is coming soon."
+    },
+    "admin": {
+      "eyebrow": "Admin",
+      "title": "A dashboard built for museums and admins",
+      "comingSoon": "This section is coming soon."
+    },
+    "footer": {
+      "tagline": "Museums. Art. Discovery.",
+      "socialMedia": "Social Media",
+      "copyright": "arte·fact. All rights reserved.",
+      "links": {
+        "functionalities": "Features",
+        "museums": "Partner museums",
+        "admin": "Admin",
+        "privacy": "Privacy",
+        "contact": "Contact"
+      }
+    },
+    "cookieConsent": {
+      "title": "We value your privacy",
+      "description": "We use cookies to understand how you use Artefact and to improve your experience. You can accept or reject non-essential cookies at any time.",
+      "accept": "Accept",
+      "reject": "Reject"
+    }
+  }
+}
