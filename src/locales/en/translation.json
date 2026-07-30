@@ -23,8 +23,66 @@
     },
     "functionalities": {
       "eyebrow": "Features",
-      "title": "Everything you need to explore a museum",
-      "comingSoon": "This section is coming soon."
+      "title": "The",
+      "titleHighlight": "artifact hunt",
+      "subtitle": "Explore partner museums in a fully interactive way. Find hidden exhibits through clever clues, scan them with your phone, and turn every visit into a captivating cultural game.",
+      "steps": {
+        "discover": {
+          "number": "01",
+          "title": "Discover",
+          "description": "Use curators' clues and the interactive map to locate the painting, sculpture, or historical object. Every exhibit has a story that guides you straight to its location.",
+          "bullets": ["Detailed literary clues", "Itinerary optimized by floor"]
+        },
+        "scan": {
+          "number": "02",
+          "title": "Scan",
+          "description": "Once you've located the exhibit, point your phone's camera at it. Our smart visual recognition algorithm identifies it instantly and credits your account with",
+          "descriptionHighlight": "+25 points.",
+          "bonusTitle": "Instant bonus received",
+          "bonusSubtitle": "Points are stored in your explorer profile."
+        },
+        "quiz": {
+          "number": "03",
+          "title": "Test yourself",
+          "description": "Get ready to put your attention and freshly gained knowledge to the test. Correctly answer 2 quick quiz questions about the exhibit you found to earn substantial bonus points.",
+          "bullets": ["Real-time validated answers", "Extra points added instantly"]
+        }
+      },
+      "cta": {
+        "title": "Ready to start the",
+        "titleHighlight": "hunt?",
+        "subtitle": "Download the arte·fact app right now and start the most interactive adventure through Romania's museums."
+      },
+      "divider": {
+        "exampleMuseum": "Muzeul Arta Lemnului, Câmpulung Moldovenesc",
+        "suggestMuseum": "Suggest a museum at contact@art-fact.ai"
+      },
+      "showcase": {
+        "eyebrow": "Feature",
+        "items": {
+          "camera": {
+            "number": "01",
+            "title": "AR Camera",
+            "description": "Point your camera at any exhibit and get detailed information instantly. Visual recognition trained on Romanian heritage."
+          },
+          "ai": {
+            "number": "02",
+            "title": "Ask AI",
+            "description": "Ask any question about the objects in the museum. The AI gives you historical context, comparisons, and fascinating stories instantly."
+          },
+          "itinerary": {
+            "number": "03",
+            "title": "Your Itinerary",
+            "description": "Get an optimized route through the museums, with estimated time and recommended order. Your visit, perfectly planned."
+          }
+        }
+      },
+      "closing": {
+        "eyebrow": "All in one place",
+        "titleLine1": "One app.",
+        "titleHighlight": "Infinite",
+        "titleLine2": "discoveries."
+      }
     },
     "museums": {
       "eyebrow": "Museums",

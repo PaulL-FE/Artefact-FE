@@ -1,4 +1,7 @@
-# Stage 1: Build
+# Used only to produce the static build/ output — Jenkins extracts it via
+# `docker cp` and rsyncs it to the server. Nginx on the server serves the
+# files straight from a mounted volume (see deploy/docker-compose.yaml), so
+# this image is never deployed or pushed to a registry.
 FROM node:22-alpine AS build
 WORKDIR /app
 
@@ -12,18 +15,3 @@ RUN npm install --legacy-peer-deps
 COPY . .
 
 RUN npm run build
-
-# Stage 2: Serve
-FROM nginx:alpine
-
-ARG DOMAIN=CHANGE_ME_DOMAIN
-ENV SERVER_NAME=$DOMAIN
-
-RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx.conf.template /tmp/nginx.conf.template
-RUN envsubst '${SERVER_NAME}' < /tmp/nginx.conf.template > /etc/nginx/conf.d/default.conf && \
-    rm /tmp/nginx.conf.template
-
-COPY --from=build /app/build /usr/share/nginx/html
-EXPOSE 80 443
-CMD ["nginx", "-g", "daemon off;"]

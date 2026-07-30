@@ -6,6 +6,12 @@ import useIsMobile from '../../../hooks/useIsMobile';
 import { trackEvent } from '../../../analytics';
 import phoneDesktop from '../../../images/phone-1.png';
 import phoneMobile from '../../../images/phone-1-mobile.png';
+import avatar1 from '../../../images/Person (1).png';
+import avatar2 from '../../../images/Person (2).png';
+import avatar3 from '../../../images/Person (3).png';
+import avatar4 from '../../../images/Person (4).png';
+
+const AVATARS = [avatar1, avatar2, avatar3, avatar4];
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -60,17 +66,25 @@ const HeroSection = () => {
           </div>
 
           <div className="hero-section__rating">
-            <div className="hero-section__stars">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <StarIcon key={index} />
+            <div className="hero-section__avatars">
+              {AVATARS.map((avatar, index) => (
+                <img key={index} className="hero-section__avatar" src={avatar} alt="" />
               ))}
             </div>
-            <span className="hero-section__rating-value">
-              {t('landing.hero.ratingValue', '5.0')}
-            </span>
-            <span className="hero-section__rating-count">
-              {t('landing.hero.usersCount', '+100 active users')}
-            </span>
+
+            <div className="hero-section__rating-info">
+              <div className="hero-section__stars">
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <StarIcon key={index} />
+                ))}
+              </div>
+              <span className="hero-section__rating-value">
+                {t('landing.hero.ratingValue', '5.0')}
+              </span>
+              <span className="hero-section__rating-count">
+                {t('landing.hero.usersCount', '+100 active users')}
+              </span>
+            </div>
           </div>
         </div>
 

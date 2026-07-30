@@ -1,0 +1,19 @@
+services:
+  frontend:
+    image: nginx:alpine
+    container_name: artefact-fe-prod
+    restart: always
+    environment:
+      # TODO: replace CHANGE_ME_DOMAIN with the real domain
+      - SERVER_NAME=CHANGE_ME_DOMAIN
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Jenkins scp's the compiled static files + nginx.conf.template here on
+      # every deploy (see Jenkinsfile 'Transfer to Server' stage).
+      - ./frontend/build:/usr/share/nginx/html:ro
+      - ./frontend/nginx.conf.template:/tmp/nginx.conf.template:ro
+      # TODO: replace CHANGE_ME_DOMAIN with the real domain once certbot has issued certs for it
+      - /etc/letsencrypt/live/CHANGE_ME_DOMAIN/fullchain.pem:/certs/cert.pem:ro
+      - /etc/letsencrypt/live/CHANGE_ME_DOMAIN/privkey.pem:/certs/key.pem:ro

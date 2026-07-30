@@ -23,8 +23,66 @@
     },
     "functionalities": {
       "eyebrow": "Funcționalități",
-      "title": "Tot ce îți trebuie ca să explorezi un muzeu",
-      "comingSoon": "Această secțiune este în curând de pregătire."
+      "title": "Vânătoarea de",
+      "titleHighlight": "artefacte",
+      "subtitle": "Explorează muzeele partenere într-un mod complet interactiv. Găsește exponatele ascunse prin indicii deștepte, scanează-le cu telefonul și transformă fiecare vizită într-un joc captivant de cultură.",
+      "steps": {
+        "discover": {
+          "number": "01",
+          "title": "Descoperă",
+          "description": "Folosește indiciile curatorilor și harta interactivă pentru a localiza tabloul, sculptura sau obiectul istoric. Fiecare exponat are o poveste care te ghidează direct spre locul lui.",
+          "bullets": ["Indicii literare detaliate", "Itinerar optimizat pe etaje"]
+        },
+        "scan": {
+          "number": "02",
+          "title": "Scanează",
+          "description": "Odată ce ai localizat exponatul, îndreaptă camera telefonului spre el. Algoritmul nostru inteligent de recunoaștere vizuală îl va identifica instantaneu și îți va credita contul cu",
+          "descriptionHighlight": "+25 de puncte.",
+          "bonusTitle": "Bonus instant primit",
+          "bonusSubtitle": "Punctele sunt stocate în profilul tău de explorator."
+        },
+        "quiz": {
+          "number": "03",
+          "title": "Testează-te",
+          "description": "Fii gata să îți pui la încercare atenția și cunoștințele proaspăt dobândite. Răspunde corect la cele 2 întrebări rapide de tip quiz despre artefactul găsit pentru a câștiga puncte bonus substanțiale.",
+          "bullets": ["Răspunsuri validate în timp real", "Puncte extra adăugate imediat"]
+        }
+      },
+      "cta": {
+        "title": "Pregătit să începi",
+        "titleHighlight": "vânătoarea?",
+        "subtitle": "Descarcă aplicația arte·fact chiar acum și pornește în cea mai interactivă aventură prin muzeele din România."
+      },
+      "divider": {
+        "exampleMuseum": "Muzeul Arta Lemnului, Câmpulung Moldovenesc",
+        "suggestMuseum": "Sugerează-ne muzee la contact@art-fact.ai"
+      },
+      "showcase": {
+        "eyebrow": "Funcționalitate",
+        "items": {
+          "camera": {
+            "number": "01",
+            "title": "Camera AR",
+            "description": "Îndreaptă camera spre orice exponat și primești imediat informații detaliate. Recunoaștere vizuală antrenată pe patrimoniul românesc."
+          },
+          "ai": {
+            "number": "02",
+            "title": "Întreabă AI",
+            "description": "Pune orice întrebare despre obiectele din muzeu. AI-ul îți oferă context istoric, comparații și povești fascinante instant."
+          },
+          "itinerary": {
+            "number": "03",
+            "title": "Itinerarul tău",
+            "description": "Primești un traseu optimizat prin muzee, cu timp estimat și ordine recomandată. Vizita ta, planificată perfect."
+          }
+        }
+      },
+      "closing": {
+        "eyebrow": "Tot într-un loc",
+        "titleLine1": "O aplicație.",
+        "titleHighlight": "Infinite",
+        "titleLine2": "descoperiri."
+      }
     },
     "museums": {
       "eyebrow": "Muzee",

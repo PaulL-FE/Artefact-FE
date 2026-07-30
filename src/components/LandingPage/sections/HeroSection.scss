@@ -25,7 +25,7 @@
     align-items: center;
     gap: 10px;
     color: $color-primary;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -34,7 +34,7 @@
     &::before {
       content: '';
       display: inline-block;
-      width: 24px;
+      width: 40px;
       height: 1px;
       background: $color-primary;
       flex-shrink: 0;
@@ -44,9 +44,9 @@
   &__title {
     font-style: italic;
     font-weight: 600;
-    font-size: 64px;
+    font-size: 88px;
     line-height: 1.08;
-    color: #1A1A1A;
+    color: #1A1A2E;
     margin: 0 0 24px;
 
     &-line--accent {
@@ -98,6 +98,33 @@
   }
 
   &__rating {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__avatars {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.08);
+    object-fit: cover;
+    margin-left: -10px;
+    display: block;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__rating-info {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -174,9 +201,9 @@
       align-items: center;
     }
 
-    &__eyebrow::before {
-      display: none;
-    }
+    // &__eyebrow::before {
+    //   display: none;
+    // }
 
     &__title {
       font-size: 36px;
@@ -192,6 +219,11 @@
       flex-wrap: wrap;
     }
 
+    &__rating {
+      flex-direction: column;
+      gap: 12px;
+    }
+
     &__store-btn {
       padding: 12px 20px;
       font-size: 14px;
@@ -199,6 +231,12 @@
 
     &__visual {
       max-width: 320px;
+    }
+    .hero-section__rating-info{
+      justify-content: center;
+      .hero-section__rating-count{
+        flex: 100%; 
+      }
     }
   }
 }

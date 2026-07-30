@@ -2,14 +2,13 @@ pipeline {
     agent any
 
     environment {
-        REGISTRY = 'ghcr.io'
-        IMAGE_NAME = 'ghcr.io/paull-fe/artefact-fe'
-        // TODO: fill in once the target server is decided
-        DEPLOY_HOST = 'CHANGE_ME_SERVER_IP'
-        DEPLOY_USER = 'CHANGE_ME_SSH_USER'
-        DEPLOY_PATH = '/CHANGE_ME/path/to/project-root'
+        ENV_NAME = 'prod'
+        CONTAINER_NAME = "node-build-${ENV_NAME}"
+        DEPLOY_HOST = '192.168.2.45'
+        DEPLOY_USER = 'rooot3'
+        // TODO: fill in once Vlad confirms the deploy directory on the server
+        DEPLOY_PATH = 'CHANGE_ME_DEPLOY_PATH'
         // TODO: replace with the real production domain once it's registered/pointed
-        DOMAIN = 'CHANGE_ME_DOMAIN'
         REACT_APP_BASE_URL = 'https://CHANGE_ME_DOMAIN'
     }
 
@@ -18,33 +17,48 @@ pipeline {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/PaulL-FE/Artefact-FE.git',
-                    credentialsId: 'github-token'
+                    credentialsId: 'github-paul-token'
             }
         }
 
-        stage('Build Image') {
+        stage('Cleanup Stale Container') {
+            steps {
+                sh """
+                    docker rm -f ${CONTAINER_NAME} || true
+                """
+            }
+        }
+
+        stage('Build Static Files') {
             steps {
                 script {
                     def commitHash = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
                     env.COMMIT_HASH = commitHash
                     sh """
-                        docker build \
-                            --build-arg REACT_APP_BASE_URL=${REACT_APP_BASE_URL} \
-                            --build-arg DOMAIN=${DOMAIN} \
-                            -t ${IMAGE_NAME}:${commitHash} \
-                            -t ${IMAGE_NAME}:latest .
+                        docker run --rm --name ${CONTAINER_NAME} \
+                            --mount type=bind,source=\$(pwd),target=/build \
+                            -w /build \
+                            -e REACT_APP_BASE_URL=${REACT_APP_BASE_URL} \
+                            node:22-alpine \
+                            sh -c "npm install --legacy-peer-deps && npm run build"
                     """
                 }
             }
         }
 
-        stage('Push Image') {
+        stage('Transfer to Server') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'github-token', usernameVariable: 'GH_USER', passwordVariable: 'GH_TOKEN')]) {
+                withCredentials([
+                    usernamePassword(credentialsId: 'artefact-fe-ssh', usernameVariable: 'SSH_USER', passwordVariable: 'SSH_PASS')
+                ]) {
                     sh """
-                        echo \$GH_TOKEN | docker login ${REGISTRY} -u \$GH_USER --password-stdin
-                        docker push ${IMAGE_NAME}:${COMMIT_HASH}
-                        docker push ${IMAGE_NAME}:latest
+                        sshpass -p \$SSH_PASS scp -o StrictHostKeyChecking=no -r \
+                            build/* \
+                            ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/frontend/build/
+
+                        sshpass -p \$SSH_PASS scp -o StrictHostKeyChecking=no \
+                            nginx.conf.template \
+                            ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/frontend/nginx.conf.template
                     """
                 }
             }
@@ -53,19 +67,14 @@ pipeline {
         stage('Deploy') {
             steps {
                 withCredentials([
-                    usernamePassword(credentialsId: 'hetzner-ssh', usernameVariable: 'SSH_USER', passwordVariable: 'SSH_PASS')
+                    usernamePassword(credentialsId: 'artefact-fe-ssh', usernameVariable: 'SSH_USER', passwordVariable: 'SSH_PASS')
                 ]) {
                     sh """
                         sshpass -p \$SSH_PASS ssh -o StrictHostKeyChecking=no ${DEPLOY_USER}@${DEPLOY_HOST} << 'ENDSSH'
                             cd ${DEPLOY_PATH}
-                            docker compose pull frontend
                             docker compose up -d --force-recreate --no-deps frontend
-                            docker image prune -f
 ENDSSH
                     """
-                    // NOTE: 'frontend' is the docker-compose service name on the target server.
-                    // If this server already runs another frontend (e.g. CvLab-FE), rename the
-                    // service in docker-compose.yml (and here) to avoid clobbering it.
                 }
             }
         }
@@ -73,14 +82,13 @@ ENDSSH
 
     post {
         success {
-            echo "Frontend deployed successfully! Image: ${IMAGE_NAME}:${COMMIT_HASH}"
+            echo "FE-Prod deployed! Commit: ${COMMIT_HASH}"
         }
         failure {
-            echo "Frontend pipeline failed!"
+            echo "FE-Prod pipeline failed!"
         }
         always {
-            sh "docker rmi ${IMAGE_NAME}:${COMMIT_HASH} || true"
-            sh "docker rmi ${IMAGE_NAME}:latest || true"
+            sh "rm -rf build/ node_modules/ || true"
         }
     }
 }

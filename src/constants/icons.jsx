@@ -133,3 +133,52 @@ export const DownloadIcon = () => (
   </svg>
 )
 
+export const MapPinIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M13.3334 6.66667C13.3334 10.6667 8.00002 14.6667 8.00002 14.6667C8.00002 14.6667 2.66669 10.6667 2.66669 6.66667C2.66669 5.25218 3.22859 3.89563 4.22878 2.89543C5.22898 1.89524 6.58553 1.33334 8.00002 1.33334C9.41451 1.33334 10.7711 1.89524 11.7713 2.89543C12.7715 3.89563 13.3334 5.25218 13.3334 6.66667Z" stroke="currentColor" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M8.00002 8.66667C9.10459 8.66667 10 7.77124 10 6.66667C10 5.5621 9.10459 4.66667 8.00002 4.66667C6.89545 4.66667 6.00002 5.5621 6.00002 6.66667C6.00002 7.77124 6.89545 8.66667 8.00002 8.66667Z" stroke="currentColor" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+export const SwapIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M2 5.33334H12.6667L10 2.66667M14 10.6667H3.33333L6 13.3333" stroke="currentColor" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+export const ChatIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M14 7.33334C14.0035 8.16523 13.8054 8.98576 13.4227 9.7245C12.9686 10.6082 12.2793 11.3487 11.4315 11.8637C10.5837 12.3787 9.6106 12.6479 8.62 12.6417C7.78811 12.6452 6.96758 12.4471 6.22867 12.0643L2 13.3333L3.26933 9.10467C2.8866 8.36576 2.68843 7.54523 2.692 6.71334C2.68575 5.72274 2.95493 4.74968 3.46992 3.90188C3.98491 3.05408 4.72538 2.36477 5.60933 1.91067C6.34807 1.52794 7.16861 1.32977 8 1.33334H8.31333C9.62129 1.40418 10.8574 1.95491 11.7889 2.87889C12.7204 3.80287 13.2822 5.03899 13.36 6.34667L14 7.33334Z" stroke="currentColor" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+export const RouteIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <circle cx="3.33333" cy="4" r="1.66667" stroke="currentColor" strokeWidth="1.33333"/>
+    <circle cx="12.6667" cy="12" r="1.66667" stroke="currentColor" strokeWidth="1.33333"/>
+    <path d="M5 4H10C11.1046 4 12 4.89543 12 6V8C12 9.10457 11.1046 10 10 10H6C4.89543 10 4 10.8954 4 12V12" stroke="currentColor" strokeWidth="1.33333" strokeLinecap="round"/>
+  </svg>
+)
+
+export const EyeBrowIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+    <path d="M1.75 4.08333V2.91667C1.75 2.60725 1.87292 2.3105 2.09171 2.09171C2.3105 1.87292 2.60725 1.75 2.91667 1.75H4.08333" stroke="#FE6C00" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M9.91666 1.75H11.0833C11.3927 1.75 11.6895 1.87292 11.9083 2.09171C12.1271 2.3105 12.25 2.60725 12.25 2.91667V4.08333" stroke="#FE6C00" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M12.25 9.91675V11.0834C12.25 11.3928 12.1271 11.6896 11.9083 11.9084C11.6895 12.1272 11.3927 12.2501 11.0833 12.2501H9.91666" stroke="#FE6C00" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M4.08333 12.2501H2.91667C2.60725 12.2501 2.3105 12.1272 2.09171 11.9084C1.87292 11.6896 1.75 11.3928 1.75 11.0834V9.91675" stroke="#FE6C00" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M4.08334 7H9.91667" stroke="#FE6C00" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+export const ArrowIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+    <g clipPath="url(#clip0_11_9291)">
+    <path d="M1.75 6.4165L12.8333 1.1665L7.58333 12.2498L6.41667 7.58317L1.75 6.4165Z" stroke="#FE6C00" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_11_9291">
+    <rect width="14" height="14" fill="white"/>
+    </clipPath>
+    </defs>
+  </svg>
+)
