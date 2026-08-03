@@ -4,10 +4,9 @@ pipeline {
     environment {
         ENV_NAME = 'prod'
         CONTAINER_NAME = "node-build-${ENV_NAME}"
-        DEPLOY_HOST = '192.168.2.45'
-        DEPLOY_USER = 'rooot3'
-        // TODO: fill in once Vlad confirms the deploy directory on the server
-        DEPLOY_PATH = 'CHANGE_ME_DEPLOY_PATH'
+        DEPLOY_HOST = '178.105.101.11'
+        DEPLOY_USER = 'ubuntu2'
+        DEPLOY_PATH = '/home/ubuntu2/Desktop/artefact-fe-prod'
         REACT_APP_BASE_URL = 'https://art-fact.ai'
     }
 

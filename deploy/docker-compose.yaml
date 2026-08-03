@@ -6,8 +6,15 @@ services:
     environment:
       - SERVER_NAME=art-fact.ai
     ports:
-      - "80:80"
-      - "443:443"
+      # - "80:80"
+      # - "443:443"
+      # TEMPORARY: adorCV already binds 80/443 on this same Hetzner box.
+      # Using alternate host ports for now so this can deploy without
+      # conflicting with it. Once Vlad set up a shared gateway
+      # (see discussion), switch these back to 80/443 and drop the host
+      # port publishing in favor of the gateway routing internally.
+      - "8081:80"
+      - "8444:443"
     volumes:
       # Jenkins scp's the compiled static files + nginx.conf.template here on
       # every deploy (see Jenkinsfile 'Transfer to Server' stage).
