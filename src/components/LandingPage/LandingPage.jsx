@@ -21,8 +21,8 @@ const LandingPage = () => {
       <main className="landing-page__main">
         <HeroSection />
         <FunctionalitySection />
-        <MuseumSection />
         <AdminSection />
+        <MuseumSection />
       </main>
       <Footer />
       <CookieConsent />

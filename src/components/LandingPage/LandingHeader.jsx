@@ -6,10 +6,11 @@ import useIsMobile from '../../hooks/useIsMobile';
 import logo from '../../images/Logo.svg';
 import { ChevronDownIcon, DownloadIcon } from '../../constants/icons';
 import { trackEvent } from '../../analytics';
+import DownloadModal from './DownloadModal';
 
-const NAV_ITEMS = ['functionalities', 'museums', 'admin'];
+const NAV_ITEMS = ['functionalities', 'admin', 'museums'];
 const LANGUAGES = ['ro', 'en'];
-const HEADER_OFFSET = 90;
+const HEADER_OFFSET = 77;
 const SCROLL_DURATION = 700;
 
 const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
@@ -44,6 +45,7 @@ const LandingHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
+  const [downloadModalOpen, setDownloadModalOpen] = useState(false);
   const langRef = useRef(null);
 
   useEffect(() => {
@@ -104,18 +106,13 @@ const LandingHeader = () => {
   const goToContact = () => {
     trackEvent('contact_us_clicked');
     setMenuOpen(false);
-    if (isOnLandingPage) {
-      scrollToSection('footer');
-    } else {
-      navigate('/');
-      setTimeout(() => scrollToSection('footer'), 100);
-    }
+    navigate('/contact');
   };
 
   const goToDownload = () => {
-    trackEvent('download_clicked');
+    trackEvent('download_clicked', { source: 'header' });
     setMenuOpen(false);
-    goToNavItem('hero');
+    setDownloadModalOpen(true);
   };
 
   const changeLanguage = (lng) => {
@@ -153,6 +150,7 @@ const LandingHeader = () => {
   );
 
   return (
+    <>
     <header className={`landing-header${scrolled ? ' landing-header--scrolled' : ''}${isMobile ? ' landing-header--mobile' : ''}`}>
       <div className="landing-header__inner">
         {!isMobile && (
@@ -232,6 +230,9 @@ const LandingHeader = () => {
         </div>
       )}
     </header>
+
+    <DownloadModal isOpen={downloadModalOpen} onClose={() => setDownloadModalOpen(false)} />
+    </>
   );
 };
 

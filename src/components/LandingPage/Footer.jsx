@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.scss';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import logo from '../../images/Logo-white.svg';
 import facebookIcon from '../../images/ic_outline-facebook.svg';
@@ -74,8 +74,16 @@ const Footer = () => {
         </div>
 
         <nav className="landing-footer__links">
-          {FOOTER_LINKS.map((link) =>
-            link.sectionId ? (
+          {FOOTER_LINKS.map((link) => {
+            if (link.key === 'contact') {
+              return (
+                <Link key={link.key} to="/contact" className="landing-footer__link">
+                  {t(`landing.footer.links.${link.key}`, link.key)}
+                </Link>
+              );
+            }
+
+            return link.sectionId ? (
               <a
                 key={link.key}
                 href={`/#${link.sectionId}`}
@@ -88,8 +96,8 @@ const Footer = () => {
               <span key={link.key} className="landing-footer__link landing-footer__link--disabled">
                 {t(`landing.footer.links.${link.key}`, link.key)}
               </span>
-            )
-          )}
+            );
+          })}
         </nav>
       </div>
 

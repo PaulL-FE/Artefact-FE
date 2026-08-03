@@ -9,13 +9,13 @@ pipeline {
         // TODO: fill in once Vlad confirms the deploy directory on the server
         DEPLOY_PATH = 'CHANGE_ME_DEPLOY_PATH'
         // TODO: replace with the real production domain once it's registered/pointed
-        REACT_APP_BASE_URL = 'https://CHANGE_ME_DOMAIN'
+        REACT_APP_BASE_URL = 'https://art-fact.ai'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main',
+                git branch: 'prod',
                     url: 'https://github.com/PaulL-FE/Artefact-FE.git',
                     credentialsId: 'github-paul-token'
             }

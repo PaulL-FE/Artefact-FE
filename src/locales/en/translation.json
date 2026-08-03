@@ -85,14 +85,70 @@
       }
     },
     "museums": {
-      "eyebrow": "Museums",
-      "title": "Artefact partner museums",
-      "comingSoon": "This section is coming soon."
+      "eyebrow": "Partner museum",
+      "name": "Muzeul Arta Lemnului",
+      "location": "Câmpulung Moldovenesc, Bucovina",
+      "description": "The Wood Art Museum is a unique museum in Romania, dedicated to the cultural heritage of wood and Bucovina's traditions. Its exhibitions showcase crafts, everyday household objects, traditional architectural elements, and artistic creations made of wood, highlighting the role of this material in the life of Bucovina's communities.",
+      "info": {
+        "hours": {
+          "label": "Hours",
+          "value": "Tue – Fri: 9:00 AM – 6:00 PM • Sat – Sun: 10:00 AM – 6:00 PM • Mon: Closed"
+        },
+        "address": {
+          "label": "Address",
+          "value": "Calea Transilvaniei 10, Câmpulung Moldovenesc, Suceava County"
+        },
+        "contact": {
+          "label": "Contact",
+          "value": "+40 230 311 378 • contact@muzeulartalemnului.ro"
+        }
+      },
+      "cta": "Explore in Arte·fact",
+      "badge": "Artifact hunt available",
+      "download": {
+        "eyebrow": "Available now, free",
+        "titleLine1": "Start the",
+        "titleLine2": "cultural adventure.",
+        "subtitle": "Download arte·fact for free and discover Romanian heritage in a whole new way."
+      }
     },
     "admin": {
-      "eyebrow": "Admin",
-      "title": "A dashboard built for museums and admins",
-      "comingSoon": "This section is coming soon."
+      "eyebrow": "For administrators",
+      "titleLine1": "Control the",
+      "titleLine2": "museum",
+      "titleHighlight": "experience.",
+      "subtitle": "The Admin app gives you full control: monitor visitors in real time, manage the treasure hunt, and analyze engagement data.",
+      "features": {
+        "hunt": {
+          "title": "Treasure Hunt",
+          "description": "Create and control interactive routes for visitors"
+        },
+        "stats": {
+          "title": "Real-time Statistics",
+          "description": "Data on engagement, AR scans, and active sessions"
+        },
+        "content": {
+          "title": "Exhibit Management",
+          "description": "Update content, information, and images directly from the app"
+        }
+      },
+      "reviews": {
+        "andreea": {
+          "quote": "I discovered objects I'd seen for years but knew nothing about. Now I understand them.",
+          "name": "Andreea M.",
+          "role": "Visitor, Palatul Culturii"
+        },
+        "bogdan": {
+          "quote": "The treasure hunt was a revelation for my kids. They spent 3 hours in the museum without getting bored.",
+          "name": "Bogdan T.",
+          "role": "Father, Iași"
+        },
+        "elena": {
+          "quote": "As an administrator, I can see in real time which section attracts the most attention and adjust tours quickly.",
+          "name": "Elena V.",
+          "role": "Museum director, Sibiu"
+        }
+      }
     },
     "footer": {
       "tagline": "Museums. Art. Discovery.",
@@ -111,6 +167,30 @@
       "description": "We use cookies to understand how you use Artefact and to improve your experience. You can accept or reject non-essential cookies at any time.",
       "accept": "Accept",
       "reject": "Reject"
+    },
+    "contactPage": {
+      "eyebrow": "Contact",
+      "title": "Let's talk",
+      "subtitle": "Contact us to arrange a discussion about enrolling your museum in the Artefact app.",
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Ana Popescu",
+      "workEmail": "Email",
+      "workEmailPlaceholder": "ana@museum.ro",
+      "museumName": "Museum name",
+      "museumNamePlaceholder": "Your museum...",
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help.",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Thanks! We'll get back to you within 24 hours.",
+      "error": "Something went wrong. Please try again."
+    },
+    "downloadModal": {
+      "title": "Download Artefact",
+      "subtitle": "Explore Romania's cultural heritage in an interactive way. Download the app for free and start the adventure.",
+      "ratingLabel": "User rating",
+      "availability": "Available for free on iOS and Android",
+      "close": "Close"
     }
   }
 }

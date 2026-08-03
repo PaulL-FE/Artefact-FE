@@ -85,14 +85,70 @@
       }
     },
     "museums": {
-      "eyebrow": "Muzee",
-      "title": "Muzeele partenere Artefact",
-      "comingSoon": "Această secțiune este în curând de pregătire."
+      "eyebrow": "Muzeu partener",
+      "name": "Muzeul Arta Lemnului",
+      "location": "Câmpulung Moldovenesc, Bucovina",
+      "description": "Muzeul Arta Lemnului este un muzeu unic în România, dedicat patrimoniului cultural al lemnului și tradițiilor bucovinene. Expozițiile sale prezintă meșteșugurile, obiectele de uz gospodăresc, elementele de arhitectură tradițională și creațiile artistice realizate din lemn, punând în valoare rolul acestui material în viața comunităților din Bucovina.",
+      "info": {
+        "hours": {
+          "label": "Program",
+          "value": "Marți – Vineri: 09:00 – 18:00 • Sâmbătă – Duminică: 10:00 – 18:00 • Luni: Închis"
+        },
+        "address": {
+          "label": "Adresă",
+          "value": "Calea Transilvaniei 10, Câmpulung Moldovenesc, județul Suceava"
+        },
+        "contact": {
+          "label": "Contact",
+          "value": "+40 230 311 378 • contact@muzeulartalemnului.ro"
+        }
+      },
+      "cta": "Explorează în Arte·fact",
+      "badge": "Vânătoare de artefacte disponibilă",
+      "download": {
+        "eyebrow": "Disponibil acum, gratuit",
+        "titleLine1": "Începe aventura",
+        "titleLine2": "culturală.",
+        "subtitle": "Descarcă arte·fact gratuit și descoperă patrimoniul românesc într-un mod cu totul nou."
+      }
     },
     "admin": {
-      "eyebrow": "Admin",
-      "title": "Panou dedicat muzeelor și administratorilor",
-      "comingSoon": "Această secțiune este în curând de pregătire."
+      "eyebrow": "Pentru administratori",
+      "titleLine1": "Controlează",
+      "titleLine2": "experiența",
+      "titleHighlight": "din muzeu.",
+      "subtitle": "Aplicația Admin îți oferă control complet: monitorizezi vizitatorii în timp real, gestionezi vânătoarea de comori și analizezi datele de engagement.",
+      "features": {
+        "hunt": {
+          "title": "Vânătoare de comori",
+          "description": "Creezi și controlezi trasee interactive pentru vizitatori"
+        },
+        "stats": {
+          "title": "Statistici în timp real",
+          "description": "Date despre engagement, scanări AR și sesiuni active"
+        },
+        "content": {
+          "title": "Management exponate",
+          "description": "Actualizezi conținut, informații și imagini direct din app"
+        }
+      },
+      "reviews": {
+        "andreea": {
+          "quote": "Am descoperit obiecte pe care le vedeam de ani de zile, dar despre care nu știam nimic. Acum le înțeleg.",
+          "name": "Andreea M.",
+          "role": "Vizitator, Palatul Culturii"
+        },
+        "bogdan": {
+          "quote": "Vânătoarea de comori a fost o revelație pentru copiii mei. Au petrecut 3 ore în muzeu fără să se plictisească.",
+          "name": "Bogdan T.",
+          "role": "Tată, Iași"
+        },
+        "elena": {
+          "quote": "Ca administrator, pot vedea în timp real care secțiune atrage cel mai mult și pot ajusta tururile rapid.",
+          "name": "Elena V.",
+          "role": "Director muzeu, Sibiu"
+        }
+      }
     },
     "footer": {
       "tagline": "Muzee. Artă. Descoperire.",
@@ -111,6 +167,30 @@
       "description": "Folosim cookie-uri pentru a înțelege cum folosești Artefact și pentru a-ți îmbunătăți experiența. Poți accepta sau refuza cookie-urile neesențiale oricând.",
       "accept": "Acceptă",
       "reject": "Refuză"
+    },
+    "contactPage": {
+      "eyebrow": "Contact",
+      "title": "Hai să vorbim",
+      "subtitle": "Contactează-ne pentru a stabili o discuție referitoare la înrolarea muzeului în cadrul aplicației Artefact.",
+      "fullName": "Nume complet",
+      "fullNamePlaceholder": "Ana Popescu",
+      "workEmail": "Email",
+      "workEmailPlaceholder": "ana@muzeu.ro",
+      "museumName": "Numele muzeului",
+      "museumNamePlaceholder": "Muzeul...",
+      "message": "Mesaj",
+      "messagePlaceholder": "Spune-ne cum te putem ajuta.",
+      "submit": "Trimite mesajul",
+      "sending": "Se trimite...",
+      "success": "Mulțumim! Îți răspundem în cel mult 24 de ore.",
+      "error": "A apărut o eroare. Te rugăm să încerci din nou."
+    },
+    "downloadModal": {
+      "title": "Descarcă Artefact",
+      "subtitle": "Explorează patrimoniul cultural al României într-un mod interactiv. Descarcă aplicația gratuit și începe aventura.",
+      "ratingLabel": "Evaluare utilizatori",
+      "availability": "Disponibil gratuit pe iOS și Android",
+      "close": "Închide"
     }
   }
 }

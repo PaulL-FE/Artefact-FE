@@ -127,6 +127,33 @@ export const GooglePlayIcon = () => (
   </svg>
 )
 
+export const TrophyIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M8 21H16M12 17V21M7 4H17V9C17 11.7614 14.7614 14 12 14C9.23858 14 7 11.7614 7 9V4Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M7 5H4V7C4 8.65685 5.34315 10 7 10M17 5H20V7C20 8.65685 18.6569 10 17 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+export const TrendingUpIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M3 17L9 11L13 15L21 7M21 7H15M21 7V13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+export const UsersIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="1.5"/>
+    <path d="M23 21V19C22.9986 17.1771 21.765 15.5857 20 15.13M16 3.13C17.7699 3.58317 19.0078 5.17799 19.0078 7.005C19.0078 8.83201 17.7699 10.4268 16 10.88" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+export const CloseIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+    <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
 export const DownloadIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
     <path d="M8 1.5V10.5M8 10.5L11.5 7M8 10.5L4.5 7M2 12.5V13.5C2 14.05 2.45 14.5 3 14.5H13C13.55 14.5 14 14.05 14 13.5V12.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -181,4 +208,11 @@ export const ArrowIcon = () => (
     </clipPath>
     </defs>
   </svg>
+)
+
+export const ContactArrowIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+<path d="M10.2955 15.3611C10.3225 15.4281 10.3692 15.4854 10.4296 15.5251C10.49 15.5648 10.5611 15.5851 10.6333 15.5832C10.7055 15.5814 10.7755 15.5575 10.8338 15.5147C10.892 15.472 10.9358 15.4124 10.9593 15.3441L15.5634 1.88572C15.5861 1.82296 15.5904 1.75504 15.5759 1.68991C15.5614 1.62478 15.5286 1.56513 15.4814 1.51794C15.4342 1.47076 15.3746 1.43798 15.3094 1.42346C15.2443 1.40894 15.1764 1.41326 15.1136 1.43593L1.65529 6.0401C1.58694 6.06354 1.52739 6.10733 1.48464 6.1656C1.44189 6.22386 1.41798 6.2938 1.41613 6.36605C1.41428 6.43829 1.43457 6.50936 1.47429 6.56974C1.514 6.63011 1.57123 6.6769 1.63829 6.70381L7.25538 8.95631C7.43295 9.0274 7.59428 9.13372 7.72965 9.26885C7.86503 9.40397 7.97163 9.56512 8.04304 9.74256L10.2955 15.3611Z" fill="white" stroke="white" strokeWidth="1.41667" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M15.4796 1.52051L7.73047 9.26897" stroke="white" strokeWidth="1.41667" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
 )
