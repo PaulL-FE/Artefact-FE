@@ -8,7 +8,6 @@ pipeline {
         DEPLOY_USER = 'rooot3'
         // TODO: fill in once Vlad confirms the deploy directory on the server
         DEPLOY_PATH = 'CHANGE_ME_DEPLOY_PATH'
-        // TODO: replace with the real production domain once it's registered/pointed
         REACT_APP_BASE_URL = 'https://art-fact.ai'
     }
 
