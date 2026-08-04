@@ -29,17 +29,28 @@ pipeline {
 
         stage('Build Static Files') {
             steps {
-                script {
-                    def commitHash = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
-                    env.COMMIT_HASH = commitHash
-                    sh """
-                        docker run --rm --name ${CONTAINER_NAME} \
-                            --mount type=bind,source=\$(pwd),target=/build \
-                            -w /build \
-                            -e REACT_APP_BASE_URL=${REACT_APP_BASE_URL} \
-                            node:22-alpine \
-                            sh -c "npm install --legacy-peer-deps && npm run build"
-                    """
+                withCredentials([
+                    string(credentialsId: 'react-app-mixpane-token', variable: 'REACT_APP_MIXPANE_TOKEN'),
+                    string(credentialsId: 'react-app-ga4-measurement-id', variable: 'REACT_APP_GA4_MEASUREMENT_ID'),
+                    string(credentialsId: 'react-app-web3forms-access-key', variable: 'REACT_APP_WEB3FORMS_ACCESS_KEY')
+                ]) {
+                    script {
+                        def commitHash = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+                        env.COMMIT_HASH = commitHash
+                        sh """
+                            docker run --rm --name ${CONTAINER_NAME} \
+                                --mount type=bind,source=\$(pwd),target=/build \
+                                -w /build \
+                                -e REACT_APP_BASE_URL=${REACT_APP_BASE_URL} \
+                                -e REACT_APP_MIXPANE_TOKEN=\$REACT_APP_MIXPANE_TOKEN \
+                                -e REACT_APP_GA4_MEASUREMENT_ID=\$REACT_APP_GA4_MEASUREMENT_ID \
+                                -e REACT_APP_WEB3FORMS_ACCESS_KEY=\$REACT_APP_WEB3FORMS_ACCESS_KEY \
+                                -e HOME=/tmp \
+                                --user "\$(id -u):\$(id -g)" \
+                                node:22-alpine \
+                                sh -c "npm install --legacy-peer-deps && npm run build"
+                        """
+                    }
                 }
             }
         }

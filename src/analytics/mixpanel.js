@@ -1,7 +1,6 @@
 import mixpanel from 'mixpanel-browser';
 
 const token = process.env.REACT_APP_MIXPANE_TOKEN;
-console.log(token);
 
 let initialized = false;
 
