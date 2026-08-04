@@ -63,6 +63,10 @@
     gap: 18px;
   }
 
+  &__botcheck {
+    display: none;
+  }
+
   &__row {
     display: grid;
     grid-template-columns: 1fr 1fr;

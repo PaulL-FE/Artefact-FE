@@ -4,10 +4,9 @@ import { useTranslation } from 'react-i18next';
 import LandingHeader from '../LandingPage/LandingHeader';
 import Footer from '../LandingPage/Footer';
 import CookieConsent from '../LandingPage/CookieConsent';
-import { ContactArrowIcon } from '../../constants/icons';
+import { ContactArrowIcon, MapPinIcon } from '../../constants/icons';
 import { trackEvent, trackPageView } from '../../analytics';
-import api from '../../api';
-import { MapPinIcon } from '../../constants/icons';
+import { submitToWeb3Forms } from '../../utils/web3forms';
 
 
 const INITIAL_FORM = { fullName: '', workEmail: '', museumName: '', message: '' };
@@ -28,7 +27,14 @@ const ContactPage = () => {
     e.preventDefault();
     setStatus('sending');
     try {
-      await api.post('/contact', form);
+      await submitToWeb3Forms({
+        subject: `New museum enrollment inquiry from ${form.fullName}`,
+        from_name: 'Artefact Website',
+        name: form.fullName,
+        email: form.workEmail,
+        museum: form.museumName,
+        message: form.message,
+      });
       trackEvent('contact_form_submitted', { source: 'contact_page' });
       setStatus('success');
     } catch (err) {
@@ -61,6 +67,8 @@ const ContactPage = () => {
             </p>
           ) : (
             <form className="contact-page__form" onSubmit={handleSubmit}>
+              <input type="checkbox" name="botcheck" className="contact-page__botcheck" tabIndex="-1" autoComplete="off" />
+
               <div className="contact-page__row">
                 <div className="contact-page__field">
                   <label htmlFor="contact-fullName">
