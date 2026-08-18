@@ -153,7 +153,7 @@ const FunctionalitySection = () => {
           </span>
           <span>
             <MapPinIcon />
-            {t('landing.functionalities.divider.suggestMuseum', 'Suggest a museum at contact@art-fact.ai')}
+            {t('landing.functionalities.divider.suggestMuseum', 'Suggest a museum at laurentiu@art-fact.ai')}
           </span>
         </div>
 
