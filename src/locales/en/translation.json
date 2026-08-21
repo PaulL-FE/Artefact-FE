@@ -159,6 +159,8 @@
         "museums": "Partner museums",
         "admin": "Admin",
         "privacy": "Privacy",
+        "gdpr": "GDPR",
+        "terms": "Terms & Conditions",
         "contact": "Contact"
       }
     },
@@ -184,6 +186,21 @@
       "sending": "Sending...",
       "success": "Thanks! We'll get back to you within 24 hours.",
       "error": "Something went wrong. Please try again."
+    },
+    "privacyPolicyPage": {
+      "eyebrow": "Legal",
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: August 21, 2026"
+    },
+    "gdprPage": {
+      "eyebrow": "Legal",
+      "title": "GDPR Compliance Statement",
+      "lastUpdated": "Last updated: August 21, 2026"
+    },
+    "termsPage": {
+      "eyebrow": "Legal",
+      "title": "Terms and Conditions",
+      "lastUpdated": "Last updated: August 21, 2026"
     },
     "downloadModal": {
       "title": "Download Artefact",

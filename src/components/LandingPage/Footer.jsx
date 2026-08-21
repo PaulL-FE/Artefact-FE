@@ -18,8 +18,17 @@ const FOOTER_LINKS = [
   { key: 'museums', sectionId: 'museums' },
   { key: 'admin', sectionId: 'admin' },
   { key: 'privacy' },
+  { key: 'gdpr' },
+  { key: 'terms' },
   { key: 'contact' },
 ];
+
+const ROUTE_LINKS = {
+  privacy: '/privacy-policy',
+  gdpr: '/gdpr',
+  terms: '/terms-and-conditions',
+  contact: '/contact',
+};
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -75,9 +84,9 @@ const Footer = () => {
 
         <nav className="landing-footer__links">
           {FOOTER_LINKS.map((link) => {
-            if (link.key === 'contact') {
+            if (ROUTE_LINKS[link.key]) {
               return (
-                <Link key={link.key} to="/contact" className="landing-footer__link">
+                <Link key={link.key} to={ROUTE_LINKS[link.key]} className="landing-footer__link">
                   {t(`landing.footer.links.${link.key}`, link.key)}
                 </Link>
               );

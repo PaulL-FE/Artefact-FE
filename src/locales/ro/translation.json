@@ -159,6 +159,8 @@
         "museums": "Muzee partenere",
         "admin": "Admin",
         "privacy": "Confidențialitate",
+        "gdpr": "GDPR",
+        "terms": "Termeni și condiții",
         "contact": "Contact"
       }
     },
@@ -184,6 +186,21 @@
       "sending": "Se trimite...",
       "success": "Mulțumim! Îți răspundem în cel mult 24 de ore.",
       "error": "A apărut o eroare. Te rugăm să încerci din nou."
+    },
+    "privacyPolicyPage": {
+      "eyebrow": "Legal",
+      "title": "Politica de confidențialitate",
+      "lastUpdated": "Ultima actualizare: 21 august 2026"
+    },
+    "gdprPage": {
+      "eyebrow": "Legal",
+      "title": "Declarație de Conformitate RGPD",
+      "lastUpdated": "Ultima actualizare: 21 august 2026"
+    },
+    "termsPage": {
+      "eyebrow": "Legal",
+      "title": "Termeni și condiții",
+      "lastUpdated": "Ultima actualizare: 21 august 2026"
     },
     "downloadModal": {
       "title": "Descarcă Artefact",
